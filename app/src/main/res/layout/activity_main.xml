@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:fitsSystemWindows="true"
+   >
+<FrameLayout
+    android:layout_width="match_parent"
+    android:id="@+id/restaurant"
+    android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/expandedImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+               android:src="@drawable/images"
+                   app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.7"
+                android:contentDescription="TODO" />
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:layout_gravity="bottom"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Inka Restaurant"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginTop="10dp"
+
+                android:layout_height="wrap_content">
+            </TextView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:src="@drawable/ic_star"
+                    android:id="@+id/rating"
+                    android:layout_gravity="center"
+                    android:layout_height="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:text="5.0(200+)|ALl days:09:00AM-06.00Pm "
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="10dp"
+                    android:src="@drawable/ic_phone"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:layout_height="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:text="Reach us at:9854562142"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"></TextView>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:text="Book A Table"
+                android:id="@+id/book_table"
+                android:gravity="center"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/cardview_dark_background"
+                android:textColor="#fff"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+
+            </Button>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:background="@android:color/transparent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_collapseMode="pin"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="50dp"
+            android:id="@+id/back"
+            android:src="@drawable/ic_back_foreground"
+            android:layout_height="wrap_content"
+            ></ImageView>
+            <ImageView
+                android:layout_width="30dp"
+                android:id="@+id/info"
+              android:layout_margin="10dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/info"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"></ImageView>
+
+
+
+      </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+</FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/recyclerview"
+        android:layout_margin="5dp"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_below="@+id/restaurant"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:id="@+id/bottom_layout"
+        android:gravity="center"
+        android:background="@color/cardview_dark_background"
+        android:layout_height="50dp">
+        <ImageView
+            android:layout_width="50dp"
+            android:src="@drawable/ic_cart_foreground"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:layout_height="30dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="View Items(5 Items)"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:layout_marginStart="5dp"
+        android:id="@+id/cart_view"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:padding="10dp"
+    android:layout_height="match_parent"></TextView>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,42 @@
+{
+  "users": [
+    {
+      "PId": 1,
+      "firstName": "Indian roast",
+      "lastName": "Roast",
+      "quantity": "20",
+      "price": 5
+    },
+    {
+      "PId": 2,
+      "firstName": "Indian poori",
+      "lastName": "Poori",
+      "quantity": "20",
+      "price": 7
+
+    },
+    {
+      "PId": 3,
+      "firstName": "Indian Pasta",
+      "lastName": "Pasta",
+      "quantity": "20",
+      "price": 10
+
+    },
+    {
+      "PId": 4,
+      "firstName": "Indian Rice",
+      "lastName": "Rice",
+      "quantity": "20",
+      "price": 13
+
+    },
+    {
+      "PId": 5,
+      "firstName": "Indian Omlette",
+      "lastName": "Omlette",
+      "quantity": "20",
+      "price": 15
+    }
+  ]
+}
